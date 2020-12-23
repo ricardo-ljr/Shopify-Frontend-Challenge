@@ -1,0 +1,22 @@
+.form-container {
+  margin-top: 150px;
+  width: 100%;
+  max-width: 800px;
+}
+
+input {
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-icon {
+  font-size: 18px;
+  color: #555;
+  right: 18px;
+}
