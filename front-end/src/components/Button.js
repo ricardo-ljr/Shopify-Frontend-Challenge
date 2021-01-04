@@ -10,6 +10,9 @@ const Button = props => {
     } else {
       setDisable(true);
     }
+    if (props.nominees.length == 5) {
+      setDisable(true);
+    }
   }, [props.movie, props.nominees]);
 
   const setNominate = () => {

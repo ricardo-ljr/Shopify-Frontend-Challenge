@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Results from "./Results";
 import axios from "axios";
 import "./components.css";
@@ -46,6 +46,7 @@ const SearchBar = () => {
             aria-label="Search..."
             onChange={onInputChange}
           />
+          <button type="submit">Search</button>
         </form>
       </div>
       <Results movie={data} query={query} />

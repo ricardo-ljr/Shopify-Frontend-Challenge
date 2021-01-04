@@ -27,7 +27,8 @@ const Results = props => {
 
   return (
     <div>
-      <h1>Result for "{props.query}"</h1>
+      <h1>Results for "{props.query}"</h1>
+      <h3>Choose up to 5 nominees</h3>
       <div className="main-container">
         <div className="results-container">
           {props.movie.map((movie, index) => {
