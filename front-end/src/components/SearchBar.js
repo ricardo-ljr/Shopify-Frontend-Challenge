@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Results from "./Results";
 import axios from "axios";
 import "./components.css";
 
 const SearchBar = () => {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -20,8 +21,13 @@ const SearchBar = () => {
       .get(`http://www.omdbapi.com/?s=${query}&type=movie&apikey=${API_KEY}`)
       .then(res => {
         console.log(res.data);
-        setData({});
-        setLoading(true);
+        const result = res.data.Search;
+        if (!Object.keys(result).length) {
+          setData("Not found");
+        } else {
+          setData(result);
+          setLoading(true);
+        }
       })
       .catch(e => {
         console.log(e);
@@ -42,6 +48,7 @@ const SearchBar = () => {
           />
         </form>
       </div>
+      <Results movie={data} query={query} />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import "./App.css";
 import Searchbar from "./components/SearchBar";
+
 function App() {
   return (
     <div className="App">

@@ -20,3 +20,38 @@ input:focus {
   color: #555;
   right: 18px;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.results-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 520px;
+  height: 400px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(grey, 0.5);
+  border-radius: 10px;
+}
+
+.nominations-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 520px;
+  height: 400px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(grey, 0.5);
+  border-radius: 10px;
+}
+
+.nominate-button {
+  margin-left: 10px;
+}
+
+.movie-list {
+  color: black;
+}
