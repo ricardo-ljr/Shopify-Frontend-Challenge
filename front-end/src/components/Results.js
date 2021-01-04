@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import Nominations from "./Nominations";
 import "./components.css";
@@ -35,7 +35,11 @@ const Results = props => {
               <ul key={index}>
                 <li className="movie-list">
                   {movie.Title} {movie.Year}
-                  <Button onNominate={onNominate} movie={movie}>
+                  <Button
+                    onNominate={onNominate}
+                    movie={movie}
+                    nominees={nominees}
+                  >
                     Nominate
                   </Button>
                 </li>
