@@ -10,6 +10,13 @@ const Nominations = props => {
               <li>
                 {nominee.Title} {nominee.Year}
               </li>
+              <button
+                onClick={() => {
+                  props.onRemoveNominee(nominee);
+                }}
+              >
+                Remove
+              </button>
             </ul>
           </div>
         );

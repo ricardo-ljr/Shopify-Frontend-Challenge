@@ -11,6 +11,20 @@ const Results = props => {
     console.log(movie);
   };
 
+  const onRemoveNominee = movie => {
+    const copy = [...nominees];
+    const index = copy
+      .map(movie => {
+        return movie.imdbID;
+      })
+      .indexOf(movie.imdbID);
+
+    if (index !== -1) {
+      copy.splice(index, 1);
+      setNominees([...copy]);
+    }
+  };
+
   return (
     <div>
       <h1>Result for "{props.query}"</h1>
@@ -30,7 +44,7 @@ const Results = props => {
           })}
         </div>
         <div className="nominations-container">
-          <Nominations nominees={nominees} />
+          <Nominations nominees={nominees} onRemoveNominee={onRemoveNominee} />
         </div>
       </div>
     </div>
