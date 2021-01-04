@@ -6,7 +6,7 @@ const Button = props => {
     props.onNominate(props.movie);
   };
   return (
-    <button className="nominate-button" onClick={() => setNominate}>
+    <button className="nominate-button" onClick={() => setNominate()}>
       {props.children}
     </button>
   );

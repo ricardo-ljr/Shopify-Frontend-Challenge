@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { monitorEventLoopDelay } from "perf_hooks";
 
 const Nominations = props => {
   return (
@@ -7,7 +6,11 @@ const Nominations = props => {
       {props.nominees.map((nominee, index) => {
         return (
           <div>
-            <ul key={index}></ul>
+            <ul key={index}>
+              <li>
+                {nominee.Title} {nominee.Year}
+              </li>
+            </ul>
           </div>
         );
       })}
