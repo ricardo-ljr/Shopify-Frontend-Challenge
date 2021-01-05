@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 
 const Nominations = props => {
   const [stopNominees, setStopNominees] = useState(false);
 
+  const Bounce = styled.div`
+    animation: 2s ${keyframes`${fadeIn}`};
+  `;
+
   useEffect(() => {
-    if (props.nominees.length == 5) {
+    if (props.nominees.length === 5) {
       setStopNominees(true);
     }
   }, [props.nominees]);
@@ -16,7 +22,7 @@ const Nominations = props => {
       <div>
         {props.nominees.map(nominee => {
           return (
-            <div>
+            <Bounce>
               <ul key={nominee.imdbID}>
                 <li>
                   {nominee.Title} {nominee.Year}
@@ -29,7 +35,7 @@ const Nominations = props => {
                   Remove
                 </button>
               </ul>
-            </div>
+            </Bounce>
           );
         })}
       </div>

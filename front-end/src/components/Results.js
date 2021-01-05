@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Nominations from "./Nominations";
+
 import "./components.css";
 
 const Results = props => {
@@ -33,7 +34,7 @@ const Results = props => {
         <div className="results-container">
           {props.movie.map((movie, index) => {
             return (
-              <ul key={index}>
+              <ul key={movie.imdbID}>
                 <li className="movie-list">
                   {movie.Title} {movie.Year}
                   <Button
