@@ -26,6 +26,14 @@ input:focus {
   flex-direction: row;
 }
 
+@media (max-width: 1024px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
 .results-container {
   position: relative;
   margin: auto;
@@ -37,6 +45,18 @@ input:focus {
   border-radius: 10px;
 }
 
+@media (max-width: 1024px) {
+  .results-container {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .results-container {
+    width: 480px;
+  }
+}
+
 .nominations-container {
   position: relative;
   margin: auto;
@@ -46,6 +66,12 @@ input:focus {
   background: white;
   box-shadow: 5px 5px 15px rgba(grey, 0.5);
   border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+  .nominations-container {
+    width: 480px;
+  }
 }
 
 .nominate-button {
