@@ -1,3 +1,3 @@
 # Shopify-Frontend-Challenge
 
-## Deployed Website: https://shoppies.ricardol.com/
+## Deployed Website: [Shoppies Front-End Challenge](https://shoppies.ricardol.com/)
